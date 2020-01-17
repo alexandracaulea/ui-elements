@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tabs</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="container">
+      <article class="tabs">
+        <div role="tablist" aria-label="Explore Aarhus, Denmark">
+          <button role="tab" aria-selected="true" id="art-museum">ARoS Art Museum</button>
+          <button role="tab" aria-selected="false" id="botanical-garden">Botanical Garden</button>
+          <button role="tab" aria-selected="false" id="aquarium">Den Blå Planet Aquarium</button>
+          <button role="tab" aria-selected="false" id="boat">Boat trip to Copenhagen</button>
+        </div>
+        <div role="tabpanel" aria-labelledby="art-museum">
+          <h1>ARoS Aarhus Art Museum</h1>
+          <p>
+            ARoS is the main art museum in Aarhus and one of the largest museums in Northern Europe. On the roof of ARoS
+            you can visit the rainbow panorama.
+          </p>
+          <img src="img/art-museum.jpg" alt="ARoS Art Museum" />
+        </div>
+        <div role="tabpanel" aria-labelledby="botanical-garden" hidden>
+          <h1>Greenhouses in the Botanical Garden</h1>
+          <p>
+            The park was originally created primarily as a botanical and academic study-ground in relation to Aarhus
+            University. Here you can see thousands of plant species.
+          </p>
+          <img src="img/botanical-garden.JPG" alt="Cacti in Botanical Garden Aarhus" />
+        </div>
+        <div role="tabpanel" aria-labelledby="aquarium" hidden>
+          <h1>Northern Europe’s largest aquarium is a sea of fun</h1>
+          <p>Den Blå Planet Aquarium is the home to thousands of animals and 7 million litres of water.</p>
+          <img src="img/aquarium.jpg" alt="The ocean aquarium is the largest tank from Den Blå Planet Aquarium" />
+        </div>
+        <div role="tabpanel" aria-labelledby="boat" hidden>
+          <h1>A trip from Aarhus to Copenhagen by boat</h1>
+          <p>
+            Boats link virtually all of Denmark’s populated islands. The ferry is the fastest way to travel between
+            Copenhagen and Aarhus.
+          </p>
+          <img src="img/ferry.jpg" alt="on the boat, travelling to Copenhagen" />
+        </div>
+      </article>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
