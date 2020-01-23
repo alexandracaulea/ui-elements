@@ -106,7 +106,7 @@ button:-moz-focusring {
   font-size: 1em;
 }
 
-button.add {
+.addToCard {
   -ms-grid-row: 5;
   grid-row: 5;
   grid-column: 3 / -1;
@@ -130,23 +130,11 @@ button.add {
   text-transform: uppercase;
 }
 
-button.add:hover {
+.addToCard:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(var(--hotpink)), to(var(--yellow)));
   background: linear-gradient(to right bottom, var(--hotpink), var(--yellow));
   color: var(--white);
   border-color: currentColor;
-}
-
-.close {
-  background-color: transparent;
-  padding: 5px 10px;
-  color: var(--black);
-  border: 1px solid var(--black);
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  -ms-grid-column-align: end;
-      justify-self: end;
 }
 
 .card__description {
@@ -215,6 +203,10 @@ button.add:hover {
 }
 
 .modal {
+  display: none;
+}
+
+.modal.open {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -233,29 +225,34 @@ button.add:hover {
   background: rgba(255, 209, 102, 0.95);
   -webkit-transition: opacity 0.35s ease-out;
   transition: opacity 0.35s ease-out;
-}
-
-.modal.open {
   opacity: 1;
   pointer-events: all;
 }
 
-.modal.open .modal-inner {
+.modal.open .modal__inner {
   -webkit-animation: modalIn 0.35s ease-in;
           animation: modalIn 0.35s ease-in;
 }
 
-h2 {
-  font-size: 1.2em;
-  line-height: 1;
-  font-weight: normal;
+.closeModal {
+  background-color: transparent;
+  padding: 5px 10px;
+  color: var(--black);
+  border: 1px solid var(--black);
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  cursor: pointer;
 }
 
-span {
-  font-size: 1em;
+.closeModal:hover {
+  background: var(--hotpink);
+  color: var(--white);
 }
 
-.modal-inner {
+.modal__inner {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 7fr 1fr;
@@ -273,21 +270,25 @@ span {
           animation: modalOut 0.35s ease-out forwards;
 }
 
-.modal-inner h2 {
+.modal__heading {
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 1;
   grid-row: 1;
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: normal;
 }
 
-.modal-inner h3 {
+.modal__product-name {
   -ms-grid-row: 2;
   grid-row: 2;
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-.modal-inner span {
+.modal__product-price {
+  font-size: 1em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

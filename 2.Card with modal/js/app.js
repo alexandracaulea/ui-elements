@@ -1,25 +1,38 @@
-const cardButton = document.querySelector("button");
 const modal = document.querySelector(".modal");
-const modalInner = document.querySelector(".modal-inner");
+const modalInner = document.querySelector(".modal__inner");
+const addToCardButton = document.querySelector(".addToCard");
+let previousActiveElement;
 
-function handleButtonClick(e) {
+function openModal(e) {
   const button = e.currentTarget;
   const card = button.closest(".card");
-  const name = card.querySelector("h1").textContent;
-  const price = card.querySelector(".price").textContent;
+  const productName = card.querySelector("h1").textContent;
+  const productPrice = card.querySelector(".price").textContent;
+  const modalProductName = modalInner.querySelector(".modal__product-name");
+  const modalProductPrice = modalInner.querySelector(".modal__product-price");
+  previousActiveElement = document.activeElement;
 
-  modalInner.innerHTML = `
-    <h2>The product was added in the cart</h2>
-    <button class="close">&times;</button>
-    <h3>${name}</h3>
-    <span>${price}</span>
-  `;
+  Array.from(document.body.children).forEach(child => {
+    if (child !== modal) {
+      child.inert = true;
+    }
+  });
 
   modal.classList.add("open");
+  modalProductName.textContent = productName;
+  modalProductPrice.textContent = productPrice;
+  modalInner.querySelector("button").focus();
 }
 
 function closeModal() {
+  Array.from(document.body.children).forEach(child => {
+    if (child !== modal) {
+      child.inert = false;
+    }
+  });
+
   modal.classList.remove("open");
+  previousActiveElement.focus();
 }
 
 function handleInnerButton(e) {
@@ -30,7 +43,7 @@ function handleInnerButton(e) {
 }
 
 function handleClickingOutsideModal(e) {
-  const isOutside = !e.target.closest(".modal-inner");
+  const isOutside = !e.target.closest(".modal__inner");
   if (isOutside) {
     closeModal();
   }
@@ -44,5 +57,5 @@ function handleKeyPress(e) {
 
 modal.addEventListener("click", handleClickingOutsideModal);
 modalInner.addEventListener("click", handleInnerButton);
-cardButton.addEventListener("click", handleButtonClick);
+addToCardButton.addEventListener("click", openModal);
 window.addEventListener("keydown", handleKeyPress);
