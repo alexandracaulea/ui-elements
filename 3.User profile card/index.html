@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Example of an user profile card using CSS Grid and Flexbox" />
+    <meta name="keywords" content="HTML, CSS, CSS Flexbox, CSS Grid" />
+    <meta name="author" content="Alexandra Caulea" />
+    <title>User Profile Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <img src="img/user.jpg" alt="User image" class="card__image" />
+        <div class="card__text">
+          <h2>Alexandra Caulea</h2>
+          <p>
+            I enjoy drinking a cup of coffee every day
+          </p>
+        </div>
+        <ul class="card__info">
+          <li>
+            <span class="card__info__stats">172</span>
+            <span>posts</span>
+          </li>
+          <li>
+            <span class="card__info__stats">47</span>
+            <span>followers</span>
+          </li>
+          <li>
+            <span class="card__info__stats">20</span>
+            <span>following</span>
+          </li>
+        </ul>
+        <div class="card__action">
+          <button class="card__action__button card__action--follow">
+            follow
+          </button>
+          <button class="card__action__button card__action--message">
+            message
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
