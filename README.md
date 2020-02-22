@@ -10,3 +10,4 @@ This is the main repository for all of my UI Elements.
 | 2.  |   [Card with modal](https://github.com/alexandracaulea/ui-elements/tree/master/2.Card%20with%20modal)   | [Live Demo](https://codepen.io/alexandracaulea/full/QWwJgdM) |
 | 3.  | [User profile card](https://github.com/alexandracaulea/ui-elements/tree/master/3.User%20profile%20card) | [Live Demo](https://codepen.io/alexandracaulea/full/wvBLyqJ) |
 | 4.  |     [Pricing Tables](https://github.com/alexandracaulea/ui-elements/tree/master/4.Pricing%20Tables)     | [Live Demo](https://codepen.io/alexandracaulea/full/xxGVPYd) |
+| 5.  |   [Features Section](https://github.com/alexandracaulea/ui-elements/tree/master/5.Features%20section)   | [Live Demo](https://codepen.io/alexandracaulea/full/dyoOJKd) |
