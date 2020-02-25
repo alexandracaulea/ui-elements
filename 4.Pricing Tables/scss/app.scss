@@ -26,7 +26,7 @@ body {
 }
 
 .pricing__hero {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   background-image: url(../img/illustration.svg);
   background-position: center;
   text-align: center;
@@ -65,12 +65,11 @@ body {
   padding: 0;
 
   &:first-of-type:checked ~ label:first-of-type:after {
-    background-image: none;
     background-color: var(--clr-dark-blue);
   }
 
   &:first-of-type:checked ~ label:first-of-type:before {
-    transform: translateX(0rem);
+    transform: translateX(-2rem);
   }
 
   &:last-of-type:checked ~ label:last-of-type {
@@ -101,7 +100,6 @@ body {
     overflow: hidden;
     vertical-align: middle;
     border: 1px solid var(--clr-light);
-    // pointer-events: none;
   }
 
   &:first-of-type:before {
@@ -112,7 +110,7 @@ body {
     background: var(--clr-white);
     border: 1px solid var(--clr-light);
     border-radius: 100%;
-    transform: translateX(-2rem);
+    transform: translateX(0rem);
     transition: transform 0.35s ease-out;
   }
 

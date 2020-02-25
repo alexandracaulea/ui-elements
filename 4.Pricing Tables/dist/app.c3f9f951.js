@@ -118,41 +118,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/app.js":[function(require,module,exports) {
-var radioCheckboxes = Array.from(document.querySelectorAll("[name='duration']"));
-var priceTags = Array.from(document.querySelectorAll(".pricing__plan .price"));
-var priceState = {
+var priceP = document.querySelectorAll(".price");
+var radioButtons = Array.from(document.querySelectorAll("[name='duration']"));
+var prices = {
   monthly: [0.99, 2.99, 5.99],
   annually: [9.99, 29.9, 59.9]
 };
 
-function checkToggler() {
-  return radioCheckboxes.filter(function (radioBtn) {
+function displayPrice() {
+  var checked = radioButtons.filter(function (radioBtn) {
     return radioBtn.checked;
+  });
+  var periodPrice = checked[0].value;
+  priceP.forEach(function (price, index) {
+    return price.textContent = "$".concat(prices[periodPrice][index], "/").concat(periodPrice);
   });
 }
 
-function handlePrice(e) {
-  var duration;
-  var toggler = checkToggler();
-  console.log(toggler);
-
-  if (Object.keys(toggler).length === 0) {
-    duration = radioCheckboxes[0].dataset.price;
-    priceTags.map(function (price, index) {
-      price.textContent = "".concat(priceState[duration][index], "/").concat(duration);
-    });
-  } else {
-    duration = toggler[0].dataset.price;
-    priceTags.map(function (price, index) {
-      price.textContent = "".concat(priceState[duration][index], "/").concat(duration);
-    });
-  }
-}
-
-radioCheckboxes.forEach(function (radioBtn) {
-  return addEventListener("input", handlePrice);
+radioButtons.forEach(function (radioBtn) {
+  return addEventListener("input", displayPrice);
 });
-handlePrice();
+displayPrice();
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -181,7 +167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54570" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63890" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
