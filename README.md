@@ -1,13 +1,9 @@
 # UI Elements
 
-## My mini projects built with HTML, CSS and JavaScript.
+## UI elements that I've built so far using while learning to code.
 
-This is the main repository for all of my UI Elements.
-
-|  #  |                                              Project name                                               |                     Live Demo on CodePen                     |
-| :-: | :-----------------------------------------------------------------------------------------------------: | :----------------------------------------------------------: |
-| 1.  |                [Tabs](https://github.com/alexandracaulea/ui-elements/tree/master/1.Tabs)                | [Live Demo](https://codepen.io/alexandracaulea/full/zYxmoop) |
-| 2.  |   [Card with modal](https://github.com/alexandracaulea/ui-elements/tree/master/2.Card%20with%20modal)   | [Live Demo](https://codepen.io/alexandracaulea/full/QWwJgdM) |
-| 3.  | [User profile card](https://github.com/alexandracaulea/ui-elements/tree/master/3.User%20profile%20card) | [Live Demo](https://codepen.io/alexandracaulea/full/wvBLyqJ) |
-| 4.  |     [Pricing Tables](https://github.com/alexandracaulea/ui-elements/tree/master/4.Pricing%20Tables)     | [Live Demo](https://codepen.io/alexandracaulea/full/xxGVPYd) |
-| 5.  |   [Features Section](https://github.com/alexandracaulea/ui-elements/tree/master/5.Features%20section)   | [Live Demo](https://codepen.io/alexandracaulea/full/dyoOJKd) |
+1. UI Product Card with modal window - [Code on GitHub](https://github.com/alexandracaulea/ui-elements/tree/master/2.Card%20with%20modal) - [Live example on CodePen](https://codepen.io/alexandracaulea/full/QWwJgdM)
+2. UI Tabs - [Code on GitHub](https://github.com/alexandracaulea/ui-elements/tree/master/1.Tabs) - [Live example on CodePen](https://codepen.io/alexandracaulea/full/zYxmoop)
+3. User profile card - [Code on GitHub](https://github.com/alexandracaulea/ui-elements/tree/master/3.User%20profile%20card) - [Live example on CodePen](https://codepen.io/alexandracaulea/full/wvBLyqJ)
+4. Pricing Tables - [Code on GitHub](https://github.com/alexandracaulea/ui-elements/tree/master/4.Pricing%20Tables) - [Live example on CodePen](https://codepen.io/alexandracaulea/full/xxGVPYd)
+5. Four Cards Layout - [Code on GitHub](https://github.com/alexandracaulea/ui-elements/tree/master/5.Features%20section) - [Live example on CodePen](https://codepen.io/alexandracaulea/full/dyoOJKd)
