@@ -1,13 +1,14 @@
 {
-  "name": "5.features-section",
+  "name": "four-card-layout",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "Four Card Layout project",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "prod": "parcel build src/index.html --no-source-maps --no-minify --public-url ./ --out-dir ./prod"
   },
-  "author": "",
+  "author": "Alexandra Caulea",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.6",
