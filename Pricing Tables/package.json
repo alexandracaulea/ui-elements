@@ -4,7 +4,11 @@
   "private": true,
   "description": "Pricing table project",
   "main": "index.js",
+  "resolutions": {
+    "node-forge": "0.10.0"
+  },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "npm run clean && parcel src/index.html --out-dir development",
     "build": "rimraf ./dist && rimraf ./.cache/ && parcel build src/index.html --out-dir dist --public-url ./",
     "clean": "rimraf ./development/ && rimraf ./.cache/"
